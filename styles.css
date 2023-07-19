@@ -1,0 +1,41 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+header,
+.sidebar,
+.main {
+    border: 1px solid blue;
+}
+
+/* Main CSS */
+
+.container {
+    display: grid;
+    grid-template: 1fr 5fr / 1fr 5fr;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar main";
+    border: 2px solid red;
+    height: 100%;
+}
+
+header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.main {
+    grid-area: main;
+}
