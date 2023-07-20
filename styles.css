@@ -12,7 +12,6 @@
 body,
 html {
     height: 100%;
-    overflow: hidden;
 
     font-family: Roboto;
     font-size: 10px;
@@ -22,16 +21,6 @@ a {
     appearance: none;
     text-decoration: none;
     color: white;
-}
-
-.projects,
-.announcements,
-.trending {
-    border: 1px solid green;
-}
-
-.card {
-    border: 1px solid orange;
 }
 
 /* Main Grid */
@@ -105,24 +94,30 @@ header {
     grid-area: main;
 
     display: grid;
-    grid-template: 1fr 1fr/ 3fr 1fr;
-    grid-template-areas: 
-    "projects announcements"
-    "projects trending";
+    grid-template: 60px 1fr 1fr/ 4fr 1fr;
+    grid-template-areas:
+    "title flexWrapper" 
+    "projects flexWrapper"
+    "projects flexWrapper";
 }
 
 .projects {
     grid-area: projects;
 
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 350px;
+    gap: 4rem;
+    padding: 2rem 3rem;
 }
 
-.announcements {
-    grid-area: announcements;
-}
+.flexWrapper {
+    grid-area: flexWrapper;
+    padding-top: 2em;
 
-.trending {
-    grid-area: trending;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Sidebar CSS */
@@ -197,6 +192,11 @@ header input {
     border: none;
 }
 
+header input,
+header input::placeholder {
+    padding-left: 0.8rem;
+}
+
 .search {
     padding-left: 5rem;
 }
@@ -263,3 +263,39 @@ header input {
 .headerButtons button:active {
     background-color: #1b2d33;   
 }
+
+/* Main CSS */
+
+.main {
+    background-color: #f0f0f0;
+}
+
+.card {
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 0px 0px 10px 0.01px #d9dbdb;
+    padding: 5rem;
+}
+
+.card:hover {
+    border: 2px solid #61b7d4
+}
+
+.main > h1 {
+    padding: 2rem;
+    letter-spacing: 0.5px;
+}
+
+.announcementCard,
+.trendingCard {
+    height: 500px;
+    width: 25rem;
+    background-color: white;
+    margin-top: 3rem;
+    border-radius: 15px;
+}
+
+.trending {
+    margin-top: 3rem;
+}
+
