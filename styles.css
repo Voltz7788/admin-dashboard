@@ -176,6 +176,7 @@ header {
 
 header {
     background-color: white;
+    color: #383838;
 }
 
 header svg {
@@ -199,6 +200,10 @@ header input::placeholder {
 
 .search {
     padding-left: 5rem;
+}
+
+.search label:hover {
+    cursor: pointer;
 }
 
 .profile > img {
@@ -268,15 +273,18 @@ header input::placeholder {
 
 .main {
     background-color: #f0f0f0;
+    color: #383838;
 }
 
 .card {
     background-color: white;
-    border-radius: 14px;
+    border-radius: 10px;
     box-shadow: 0px 0px 10px 0.01px #d9dbdb;
     padding: 3rem;
+    color: #383838;
 
     display: grid;
+    grid-template-rows: 1fr 5fr 1fr;
 }
 
 .card:hover {
@@ -288,38 +296,101 @@ header input::placeholder {
     letter-spacing: 0.5px;
 }
 
-.announcementCard,
-.trendingCard {
-    height: 500px;
-    width: 25rem;
-    background-color: white;
-    margin-top: 3rem;
-    border-radius: 15px;
-}
-
 .trending {
     margin-top: 3rem;
 }
 
-.card {
-    display: grid;
-    grid-template-rows: 1fr 5fr 1fr;
-}
-
-.card h2 {
+.card h2,
+.announcementCard h2,
+.trendingCard h2 {
     font-size: 1.8rem;
 }
 
-.card p {
+.card p,
+.announcementCard p,
+.trendingCard p {
     font-size: 1.3rem;
 }
 
 .cardIcons > svg {
     height: 2.2rem;
+    color:  #383838;
 }
 
 .cardIcons {
     display: flex;
     justify-content: flex-end;
     gap: 0.8rem;
+}
+
+.announcementCard,
+.trendingCard {
+    width: 25rem;
+    background-color: white;
+    margin-top: 3rem;
+    border-radius: 10px;
+    padding: 3rem;
+
+    display: grid;
+    grid-auto-rows: 1fr;
+    
+}
+.announcementCard {
+    height: 500px;
+}
+
+.trendingCard {
+    height: 300px;
+}
+
+.announcementContainer {
+    display: grid;
+    gap: 1rem;
+    color: #383838;
+}
+
+.announcementContainer > a {
+    font-size: 1.3rem;
+    color: #383838;
+    
+}
+
+.breakMain {
+    background-color: #262626;
+    height: 1px;
+    opacity: 0.4;
+    margin-top: 3rem;
+}
+
+.trendingContainer {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.trendingContainer > img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 6rem;
+}
+
+.trendingText {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.trendingText > p{
+    font-size: 1.4rem;
+}
+
+.tag {
+    font-weight: bold;
+}
+
+.breakTrending {
+    background-color: #262626;
+    height: 1px;
+    opacity: 0.2;
+    margin-top: 1.5rem;
 }
