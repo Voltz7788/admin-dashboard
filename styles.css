@@ -24,12 +24,6 @@ a {
     color: white;
 }
 
-header,
-.sidebar,
-.main {
-    /* border: 1px solid blue; */
-}
-
 .projects,
 .announcements,
 .trending {
@@ -44,11 +38,10 @@ header,
 
 .container {
     display: grid;
-    grid-template: 1fr 5fr / 1fr 10fr;
+    grid-template: 1fr 4.5fr / 1fr 10fr;
     grid-template-areas: 
     "sidebar header"
     "sidebar main";
-    /* border: 2px solid red; */
     height: 100%;
 }
 
@@ -66,25 +59,34 @@ header {
     grid-area: search;
 
     display: flex;
+    gap: 1.5rem;
+    align-items: center;
 }
 
 .profile {
     grid-area: profile;
 
     display: flex;
+    align-items: center;
+    gap: 3rem;
+    justify-content: center;
 }
 
 .welcomeUser {
     grid-area: welcomeUser;
 
     display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
 .headerButtons {
     grid-area: headerButtons;
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 
 .sidebar {
@@ -123,7 +125,7 @@ header {
     grid-area: trending;
 }
 
-/* Style CSS */
+/* Sidebar CSS */
 .sidebar > h1 {
     font-size: 2.6rem;
     opacity: 0.85;
@@ -139,7 +141,8 @@ header {
     background-color: white;
     opacity: 0.3;
     width: 17rem;
-    height: 1px
+    height: 1px;
+    margin-top: 0.9rem;
 }
 
 .sidebar > p,
@@ -172,4 +175,91 @@ header {
 .sidebar > a:active > p,
 .sidebar > a:active > svg {
     opacity: 0.5;
+}
+
+/* Header CSS */
+
+header {
+    background-color: white;
+}
+
+header svg {
+    height: 3rem;
+    margin-top: 0.5rem;
+}
+
+header input {
+    appearance: none;
+    width: 70%;
+    height: 3rem;
+    border-radius: 15px;
+    background-color: #d9dbda;
+    border: none;
+}
+
+.search {
+    padding-left: 5rem;
+}
+
+.profile > img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 6rem;
+}
+
+.profile > p {
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: 0.05rem;
+}
+
+.profile > svg {
+    width: 2.6rem;
+}
+
+.welcomeUser {
+    padding-left: 5rem;
+    padding-bottom: 2.5rem;
+}
+
+.welcomeUser > img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 6rem;
+}
+
+.welcomeUser p {
+    font-weight: bold;
+    letter-spacing: 0.03rem;
+}
+
+.greeting > p {
+    font-size: 1.4rem;
+}
+
+.greeting > p + p {
+    font-size: 2rem;
+}
+
+.headerButtons {
+    padding-bottom: 2.5rem;
+}
+
+.headerButtons button {
+    appearance: none;
+    width: 9rem;
+    height: 3rem;
+    background-color: #14252b;
+    color: white;
+    border: none;
+    border-radius: 5000px;
+    font-weight: bold;
+}
+
+.headerButtons button:hover {
+    background-color: #264d59;
+}
+
+.headerButtons button:active {
+    background-color: #1b2d33;   
 }
