@@ -16,6 +16,16 @@ header,
     border: 1px solid blue;
 }
 
+.projects,
+.announcements,
+.trending {
+    border: 1px solid green;
+}
+
+.card {
+    border: 1px solid orange;
+}
+
 /* Main CSS */
 
 .container {
@@ -30,12 +40,65 @@ header,
 
 header {
     grid-area: header;
+
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-template-areas: 
+    "search profile"
+    "welcomeUser headerButtons";
+}
+
+.search {
+    grid-area: search;
+
+    display: flex;
+}
+
+.profile {
+    grid-area: profile;
+
+    display: flex;
+}
+
+.welcomeUser {
+    grid-area: welcomeUser;
+
+    display: flex;
+}
+
+.headerButtons {
+    grid-area: headerButtons;
+
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .sidebar {
     grid-area: sidebar;
+
+    display: grid;
 }
 
 .main {
     grid-area: main;
+
+    display: grid;
+    grid-template: 1fr 1fr/ 3fr 1fr;
+    grid-template-areas: 
+    "projects announcements"
+    "projects trending";
+}
+
+.projects {
+    grid-area: projects;
+
+    display: grid;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
 }
