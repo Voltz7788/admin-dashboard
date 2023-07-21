@@ -121,6 +121,7 @@ header {
 }
 
 /* Sidebar CSS */
+
 .sidebar > h1 {
     font-size: 2.6rem;
     opacity: 0.85;
@@ -182,6 +183,10 @@ header {
 header svg {
     height: 3rem;
     margin-top: 0.5rem;
+}
+
+header svg:hover {
+    color: #264d59CC;
 }
 
 header input {
@@ -380,7 +385,7 @@ header input::placeholder {
     gap: 0.4rem;
 }
 
-.trendingText > p{
+.trendingText > p {
     font-size: 1.4rem;
 }
 
